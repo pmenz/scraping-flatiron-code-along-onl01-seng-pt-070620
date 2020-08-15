@@ -11,13 +11,13 @@ class Scraper
   end
   
   
-  def get_course
+  def get_courses
     self.get_page.css(".post")
     #need to get a hang of this. but I think this is using #get_page and then passig it to .css
   end
   
-  def make_course 
-    self.get_course.each do |post|
+  def make_courses 
+    self.get_courses.each do |post|
       course = Course.new
       course.title = post.css("h2").text
       course.schedule = post.css(".date").text
@@ -28,7 +28,7 @@ class Scraper
   end
   
   def print_courses
-     self.make_course
+     self.make_courses
     Course.all.each do |course|
       if course.title && course.title != ""
         puts "Title: #{course.title}"
