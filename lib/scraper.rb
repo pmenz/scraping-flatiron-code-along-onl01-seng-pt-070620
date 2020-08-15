@@ -6,7 +6,8 @@ require_relative './course.rb'
 class Scraper
   
   def get_page
-    
+    Nokogiri::HTML(open("http://learn-co-curriculum.github.io/site-for-scraping/courses"))
+    #this is the code to use when you want to get data from the wesite using Nokogiri and open-uri
   end
   
   
