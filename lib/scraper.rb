@@ -12,7 +12,8 @@ class Scraper
   
   
   def get_course
-    
+    self.get_page.css(".post")
+    #need to get a hang of this. but I think this is using #get_page and then passig it to .css
   end
   
   def make_course 
