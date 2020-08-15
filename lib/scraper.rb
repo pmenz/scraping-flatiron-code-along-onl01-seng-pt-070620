@@ -22,6 +22,8 @@ class Scraper
       course.title = post.css("h2").text
       course.schedule = post.css(".date").text
       course.description = post.css("p").text
+      
+      # here we use a class method to get information  get_course<get_page then we crearte a new instance from wehre we initialize the title, schedule and description 
     end
   end
   
